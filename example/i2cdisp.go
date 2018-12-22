@@ -82,7 +82,7 @@ func lcd_display(i2c *dev.I2c, i2cp *dev.I2cparam, str string) (err error) {
 
 func main() {
 
-	i2c := dev.NewI2c("/dev/iic1")
+	i2c := dev.NewI2c("/dev/iic1") // or /dev/iic{0,2}
 
 	lcd_i2cp := dev.NewI2cparam()
 
