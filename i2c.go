@@ -82,6 +82,11 @@ func (i2cp *I2cparam) SetCmd(cmd []byte) {
 	}
 }
 
+func (i2cp *I2cparam) SetCmdOne(cmd byte) {
+	i2cp.cmdlen = 1
+	i2cp.cmd[0] = cmd
+}
+
 func (i2cp *I2cparam) SetOp(op int) {
 	i2cp.op = uint32(op)
 }
